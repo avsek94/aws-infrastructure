@@ -1,0 +1,13 @@
+Install Jenkins and configure it.
+Open Firewall port
+Install packer
+pass the url of this repo in jenkins source control. as a source control.
+In Build step select execute shell from drop down.
+  Supply full path to packer and 2 variable as defined in packer.json file
+    2 Varibles are
+        reporsitory and 
+         build number
+ For eg /usr/local/bin/packer build -var "repository=${repo_name}" -var "tag=${BUILD_NUMBER}" packer.json
+ save the job and execute the job
+ verify that the image has been created.
+ 
